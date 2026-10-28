@@ -1,0 +1,15 @@
+{
+  "method": "Random",
+  "seed": 42,
+  "budget": 100,
+  "initial_fit_seconds": 3.6041463960009423,
+  "update_fit_seconds": 38.946540049999385,
+  "update_fit_seconds_per_month": 3.2455450041666154,
+  "score_seconds": 1.7323227649958426,
+  "scoring_ms_per_1000": 15.450337712454672,
+  "query_seconds": 0.0014357040017785039,
+  "peak_rss_mb": 649.78125,
+  "scored_objects": 112122,
+  "analyst_labels": 1200,
+  "explore_fraction": 0.0
+}

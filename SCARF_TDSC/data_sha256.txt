@@ -1,0 +1,3 @@
+d6423e538fb0b84458bf584e9d25d75d5e77b973aeae302e85edca961c038148  /tmp/bodmas_kaggle.zip
+5e5123aba9a9c813fc3df49aa18c74c40c9e234eda62bbb6fc347632aee462f2  /tmp/bodmas/bodmas-timestamps.parquet
+b6052eb8d350a49a8d5a5396fbe7d16cf42848b86ff969b77464434cf2997812  ember2018.tar.bz2

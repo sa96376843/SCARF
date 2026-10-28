@@ -1,0 +1,10 @@
+Protocol element,Value
+Initial training,August 2019 only
+Calibration,September 2019 only
+Evaluation,October 2019--September 2020
+Base / retained features,384 / 384
+Monthly label budgets,"25, 50, 100, 200"
+Seeds,"13, 42, 87"
+Operating target,1% calibration FPR
+Update rule,Post-evaluation only
+Base learner,Baselines: 120 trees; SCARF: 3 x 240 trees

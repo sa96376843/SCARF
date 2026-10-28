@@ -1,0 +1,15 @@
+{
+  "method": "SCARF-PW05",
+  "seed": 42,
+  "budget": 100,
+  "initial_fit_seconds": 15.657506739000382,
+  "update_fit_seconds": 324.2298088429998,
+  "update_fit_seconds_per_month": 27.019150736916647,
+  "score_seconds": 11.01763516599749,
+  "scoring_ms_per_1000": 98.26470421502908,
+  "query_seconds": 0.019686985999214812,
+  "peak_rss_mb": 708.09765625,
+  "scored_objects": 112122,
+  "analyst_labels": 1200,
+  "explore_fraction": 0.0
+}

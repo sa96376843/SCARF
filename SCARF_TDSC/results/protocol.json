@@ -1,0 +1,58 @@
+{
+  "dataset": "BODMAS timestamps parquet mirror",
+  "initial_training": "2019-08",
+  "calibration": "2019-09",
+  "test_months": [
+    "2019-10",
+    "2019-11",
+    "2019-12",
+    "2020-01",
+    "2020-02",
+    "2020-03",
+    "2020-04",
+    "2020-05",
+    "2020-06",
+    "2020-07",
+    "2020-08",
+    "2020-09"
+  ],
+  "development_months": [
+    "2019-10",
+    "2019-11",
+    "2019-12",
+    "2020-01",
+    "2020-02",
+    "2020-03"
+  ],
+  "locked_late_months": [
+    "2020-04",
+    "2020-05",
+    "2020-06",
+    "2020-07",
+    "2020-08",
+    "2020-09"
+  ],
+  "base_features": 384,
+  "seeds": [
+    13,
+    42,
+    87
+  ],
+  "budgets": [
+    25,
+    50,
+    100,
+    200
+  ],
+  "prequential": true,
+  "scarf_version": "final",
+  "ensemble_members": 3,
+  "ensemble_trees": 240,
+  "ensemble_learning_rate": 0.05,
+  "query_weight": 2.0,
+  "pseudo_weight": 0.1,
+  "pseudo_cap_per_class": 500,
+  "reliability_auc": 0.995,
+  "reliability_scale": 0.05,
+  "baseline_source": "Unchanged outputs from the frozen single-model baseline implementation"
+}

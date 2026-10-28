@@ -1,0 +1,15 @@
+{
+  "method": "Uncertainty",
+  "seed": 42,
+  "budget": 100,
+  "initial_fit_seconds": 3.601100148000114,
+  "update_fit_seconds": 50.64492375699956,
+  "update_fit_seconds_per_month": 4.220410313083296,
+  "score_seconds": 1.8334811580061796,
+  "scoring_ms_per_1000": 16.352554877777596,
+  "query_seconds": 0.003421275994696771,
+  "peak_rss_mb": 629.8203125,
+  "scored_objects": 112122,
+  "analyst_labels": 1200,
+  "explore_fraction": 0.0
+}

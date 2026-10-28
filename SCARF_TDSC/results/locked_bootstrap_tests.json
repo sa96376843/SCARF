@@ -1,0 +1,34 @@
+[
+  {
+    "comparison":"SCARF $-$ Static",
+    "n":18,
+    "mean_difference":0.0061890403,
+    "ci_low":0.0027579866,
+    "ci_high":0.0092879825,
+    "p_value":0.0
+  },
+  {
+    "comparison":"SCARF $-$ Random",
+    "n":18,
+    "mean_difference":0.0037989619,
+    "ci_low":0.0025706916,
+    "ci_high":0.0048063013,
+    "p_value":0.0
+  },
+  {
+    "comparison":"SCARF $-$ Uncertainty",
+    "n":18,
+    "mean_difference":0.0003092392,
+    "ci_low":0.0000141194,
+    "ci_high":0.0006091554,
+    "p_value":0.0324
+  },
+  {
+    "comparison":"SCARF $-$ RecentOnly",
+    "n":18,
+    "mean_difference":0.0124133913,
+    "ci_low":0.0063828126,
+    "ci_high":0.0218769938,
+    "p_value":0.0
+  }
+]

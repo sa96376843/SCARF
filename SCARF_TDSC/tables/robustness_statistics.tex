@@ -1,0 +1,32 @@
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Method / comparison & AUC & TPR@1\%FPR & F1 & FPR & Brier & $n$ & $\Delta$ & 95\% CI & $p$ \\
+\midrule
+\multicolumn{10}{l}{\textbf{Three-seed full-horizon performance: mean $\pm$ sample SD}} \\
+Static & 0.9976 $\pm$ 0.0000 & 0.9666 $\pm$ 0.0000 & 0.9788 $\pm$ 0.0000 & 0.0183 $\pm$ 0.0000 & 0.0239 $\pm$ 0.0000 & -- & -- & -- & -- \\
+Random & 0.9981 $\pm$ 0.0000 & 0.9759 $\pm$ 0.0011 & 0.9804 $\pm$ 0.0006 & 0.0248 $\pm$ 0.0014 & 0.0155 $\pm$ 0.0006 & -- & -- & -- & -- \\
+Uncertainty & 0.9989 $\pm$ 0.0000 & 0.9872 $\pm$ 0.0002 & 0.9831 $\pm$ 0.0009 & 0.0241 $\pm$ 0.0020 & 0.0102 $\pm$ 0.0001 & -- & -- & -- & -- \\
+RecentOnly & 0.9976 $\pm$ 0.0001 & 0.9680 $\pm$ 0.0037 & 0.9516 $\pm$ 0.0022 & 0.0137 $\pm$ 0.0015 & 0.0183 $\pm$ 0.0005 & -- & -- & -- & -- \\
+SCARF & 0.9990 $\pm$ 0.0000 & 0.9871 $\pm$ 0.0016 & 0.9840 $\pm$ 0.0002 & 0.0229 $\pm$ 0.0007 & 0.0098 $\pm$ 0.0003 & -- & -- & -- & -- \\
+\midrule
+\multicolumn{10}{l}{\textbf{Locked late-month performance: April--September 2020}} \\
+Static & 0.9993 & 0.9909 & 0.9858 & 0.0041 & 0.0247 & -- & -- & -- & -- \\
+Random & 0.9996 & 0.9933 & 0.9908 & 0.0088 & 0.0100 & -- & -- & -- & -- \\
+Uncertainty & 0.9999 & 0.9968 & 0.9928 & 0.0096 & 0.0042 & -- & -- & -- & -- \\
+RecentOnly & 0.9991 & 0.9847 & 0.9336 & 0.0017 & 0.0119 & -- & -- & -- & -- \\
+SCARF & 0.9999 & 0.9971 & 0.9930 & 0.0095 & 0.0039 & -- & -- & -- & -- \\
+\midrule
+\multicolumn{10}{l}{\textbf{Full-horizon month-clustered paired bootstrap}} \\
+SCARF $-$ Static & -- & -- & -- & -- & -- & 36 & 0.0205 & [0.0035, 0.0434] & 0.0002 \\
+SCARF $-$ Random & -- & -- & -- & -- & -- & 36 & 0.0112 & [0.0035, 0.0233] & $<$0.0001 \\
+SCARF $-$ Uncertainty & -- & -- & -- & -- & -- & 36 & -0.0001 & [-0.0037, 0.0022] & 0.9978 \\
+SCARF $-$ RecentOnly & -- & -- & -- & -- & -- & 36 & 0.0191 & [0.0091, 0.0321] & $<$0.0001 \\
+\midrule
+\multicolumn{10}{l}{\textbf{Locked late-month month-clustered paired bootstrap}} \\
+SCARF $-$ Static & -- & -- & -- & -- & -- & 18 & 0.0062 & [0.0028, 0.0093] & $<$0.0001 \\
+SCARF $-$ Random & -- & -- & -- & -- & -- & 18 & 0.0038 & [0.0026, 0.0048] & $<$0.0001 \\
+SCARF $-$ Uncertainty & -- & -- & -- & -- & -- & 18 & 0.0003 & [0.0000, 0.0006] & 0.0324 \\
+SCARF $-$ RecentOnly & -- & -- & -- & -- & -- & 18 & 0.0124 & [0.0064, 0.0219] & $<$0.0001 \\
+\bottomrule
+\end{tabular}

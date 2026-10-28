@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE",
+  "months": 12,
+  "analyst_labels": 1200,
+  "initial_fit_seconds": 2.0867517000006046,
+  "update_seconds": 44.477323400002206,
+  "score_seconds": 1.4770758000086062,
+  "audit_n": 240,
+  "observed_gate_positive_months": 3,
+  "positive_acquisition_months": 3,
+  "valid_feedback_months": 12,
+  "gate_efficacy_established": false
+}

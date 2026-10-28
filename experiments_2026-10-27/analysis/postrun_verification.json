@@ -1,0 +1,17 @@
+{
+  "verified_utc": "2026-10-27T02:02:58.314555+00:00",
+  "status": "PASS",
+  "runs_checked": 27,
+  "monthly_predictions_checked": 324,
+  "prediction_metric_max_abs_error": 1.1102230246251565e-16,
+  "recomputed_feedback_max_abs_error": 1.1102230246251565e-16,
+  "audit_ids_matched_across_new_variants": true,
+  "analyst_budget_valid": true,
+  "initial_training_set_retained": true,
+  "new_pseudo_and_query_sets_disjoint": true,
+  "feedback_applied_to_next_month_only": true,
+  "threshold_ablation_preserves_probability_scores": true,
+  "historical_files_checked": 200,
+  "historical_files_changed": [],
+  "historical_result_note": "Current-environment reruns are compared to each other; differences from historical CSVs are retained separately."
+}

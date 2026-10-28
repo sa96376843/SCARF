@@ -1,0 +1,68 @@
+{
+  "suite": "comparisons",
+  "prequential": true,
+  "seeds": [
+    13,
+    42,
+    87
+  ],
+  "budget": 100,
+  "reservoir_capacity": 600,
+  "exponential_decay_months": 3.0,
+  "comparison_methods": [
+    "LogisticRegression",
+    "RandomForest",
+    "ExtraTrees",
+    "ReservoirReplay",
+    "ExpDecayReplay",
+    "QBC",
+    "EnsembleMargin"
+  ],
+  "sensitivity": [
+    [
+      "SCARF-QW4",
+      {
+        "query_weight": 4.0
+      }
+    ],
+    [
+      "SCARF-PW05",
+      {
+        "pseudo_weight": 0.05
+      }
+    ],
+    [
+      "SCARF-PW20",
+      {
+        "pseudo_weight": 0.2
+      }
+    ],
+    [
+      "SCARF-M5",
+      {
+        "members": 5
+      }
+    ],
+    [
+      "SCARF-Cap250",
+      {
+        "pseudo_cap": 250
+      }
+    ],
+    [
+      "SCARF-Cap1000",
+      {
+        "pseudo_cap": 1000
+      }
+    ]
+  ],
+  "defaults": {
+    "members": 3,
+    "trees": 240,
+    "learning_rate": 0.05,
+    "query_weight": 2.0,
+    "pseudo_weight": 0.1,
+    "pseudo_cap": 500
+  },
+  "base_feature_count": 384
+}

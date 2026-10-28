@@ -1,0 +1,80 @@
+{
+  "probabilities_identical_in_all_36_pairs": true,
+  "frozen_threshold_above_dynamic": 27,
+  "frozen_threshold_below_dynamic": 6,
+  "threshold_equal": 3,
+  "switch_counts_across_seed_month_predictions": {
+    "tp_to_fn": 301,
+    "fn_to_tp": 50,
+    "fp_to_tn": 824,
+    "tn_to_fp": 117
+  },
+  "net_additional_fn": 251,
+  "net_reduced_fp": 707,
+  "fixed_thresholds": {
+    "13": 0.16752662903034454,
+    "42": 0.15794853584026794,
+    "87": 0.1611148042502355
+  },
+  "dynamic_threshold_range": [
+    0.06471728306713441,
+    0.27297494830984287
+  ],
+  "macro_percentages": {
+    "LegacyV3": {
+      "f1": 98.38276018373261,
+      "tpr": 99.22162266405728,
+      "fpr": 2.35036796486819,
+      "tpr_at_1fpr": 98.65497105042022
+    },
+    "EnsembleMargin": {
+      "f1": 98.40219618983906,
+      "tpr": 99.26590574303901,
+      "fpr": 2.353703454023251,
+      "tpr_at_1fpr": 98.87068230719719
+    },
+    "FrozenGate": {
+      "f1": 98.3434967346695,
+      "tpr": 99.19755896398082,
+      "fpr": 2.392153310341118,
+      "tpr_at_1fpr": 98.56222807966685
+    },
+    "DynamicGate": {
+      "f1": 98.32762268546443,
+      "tpr": 99.1972679757492,
+      "fpr": 2.4261800074832283,
+      "tpr_at_1fpr": 98.53067412250795
+    },
+    "QueryOnly": {
+      "f1": 98.33634100904155,
+      "tpr": 99.1974131341206,
+      "fpr": 2.399693213102705,
+      "tpr_at_1fpr": 98.56535646725789
+    },
+    "PseudoOnly": {
+      "f1": 98.33721784667674,
+      "tpr": 99.20395201853506,
+      "fpr": 2.4209485242375766,
+      "tpr_at_1fpr": 98.55972595993178
+    },
+    "NoPseudo": {
+      "f1": 98.31477960407649,
+      "tpr": 99.20791685795595,
+      "fpr": 2.466275069257411,
+      "tpr_at_1fpr": 98.72589367562527
+    },
+    "RecentReplay": {
+      "f1": 97.28283529869536,
+      "tpr": 96.52260166474905,
+      "fpr": 1.7588733644748316,
+      "tpr_at_1fpr": 98.22765122430704
+    },
+    "FrozenThreshold": {
+      "f1": 98.44918401826752,
+      "tpr": 99.06877370138919,
+      "fpr": 2.014221031549031,
+      "tpr_at_1fpr": 98.53067412250795
+    }
+  },
+  "definition": "Rates are 12-month macro means averaged over 3 seeds. Counts sum repeated seed-month predictions, not unique corpus objects."
+}

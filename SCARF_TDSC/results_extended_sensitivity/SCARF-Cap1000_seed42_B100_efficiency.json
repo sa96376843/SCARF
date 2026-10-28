@@ -1,0 +1,15 @@
+{
+  "method": "SCARF-Cap1000",
+  "seed": 42,
+  "budget": 100,
+  "initial_fit_seconds": 15.51977535700098,
+  "update_fit_seconds": 343.3765050999991,
+  "update_fit_seconds_per_month": 28.61470875833326,
+  "score_seconds": 11.142035577002389,
+  "scoring_ms_per_1000": 99.37421359770954,
+  "query_seconds": 0.027732442002161406,
+  "peak_rss_mb": 756.5859375,
+  "scored_objects": 112122,
+  "analyst_labels": 1200,
+  "explore_fraction": 0.0
+}

@@ -1,0 +1,15 @@
+{
+  "method": "SCARF-QW4",
+  "seed": 42,
+  "budget": 100,
+  "initial_fit_seconds": 15.646197125999606,
+  "update_fit_seconds": 340.87545367900384,
+  "update_fit_seconds_per_month": 28.406287806583652,
+  "score_seconds": 10.95644889200048,
+  "scoring_ms_per_1000": 97.71899263302903,
+  "query_seconds": 0.019818849003058858,
+  "peak_rss_mb": 687.546875,
+  "scored_objects": 112122,
+  "analyst_labels": 1200,
+  "explore_fraction": 0.0
+}

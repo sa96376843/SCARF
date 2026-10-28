@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "seed": 13,
+  "budget": 100,
+  "scope": "Original v3 functions, initial fit and first update, exact same current data/cache/environment.",
+  "member_fits": 6,
+  "checks": [
+    {
+      "month": "2019-10",
+      "prediction_max_abs_error": 0.0,
+      "threshold_abs_error": 0.0
+    },
+    {
+      "month": "2019-11",
+      "prediction_max_abs_error": 0.0,
+      "threshold_abs_error": 0.0
+    }
+  ],
+  "historical_difference_note": "This verifies the new LegacyV3 path against original functions; it does not identify the cause of differences from archived historical runs."
+}

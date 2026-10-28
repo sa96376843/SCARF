@@ -1,0 +1,15 @@
+{
+  "method": "LogisticRegression",
+  "seed": 13,
+  "budget": 100,
+  "initial_fit_seconds": 0.8523590560007506,
+  "update_fit_seconds": 17.87987046299986,
+  "update_fit_seconds_per_month": 1.4899892052499883,
+  "score_seconds": 0.6907793949985717,
+  "scoring_ms_per_1000": 6.1609621216047845,
+  "query_seconds": 0.004304715999751352,
+  "peak_rss_mb": 598.4921875,
+  "scored_objects": 112122,
+  "analyst_labels": 1200,
+  "explore_fraction": 0.0
+}

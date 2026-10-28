@@ -1,0 +1,15 @@
+{
+  "method": "EnsembleMargin",
+  "seed": 13,
+  "budget": 100,
+  "initial_fit_seconds": 15.654541138999775,
+  "update_fit_seconds": 283.72369974199955,
+  "update_fit_seconds_per_month": 23.64364164516663,
+  "score_seconds": 10.516876239999874,
+  "scoring_ms_per_1000": 93.79850734021757,
+  "query_seconds": 0.0038116929981697467,
+  "peak_rss_mb": 815.0625,
+  "scored_objects": 112122,
+  "analyst_labels": 1200,
+  "explore_fraction": 0.0
+}

@@ -1,0 +1,15 @@
+{
+  "method": "Static",
+  "seed": 42,
+  "budget": 0,
+  "initial_fit_seconds": 2.8105856500005757,
+  "update_fit_seconds": 0.0,
+  "update_fit_seconds_per_month": 0.0,
+  "score_seconds": 0.8836335000014515,
+  "scoring_ms_per_1000": 7.881000160552357,
+  "query_seconds": 0.0,
+  "peak_rss_mb": 578.21875,
+  "scored_objects": 112122,
+  "analyst_labels": 0,
+  "explore_fraction": 0.0
+}

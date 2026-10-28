@@ -1,0 +1,15 @@
+{
+  "method": "ReservoirReplay",
+  "seed": 13,
+  "budget": 100,
+  "initial_fit_seconds": 2.776505372000429,
+  "update_fit_seconds": 24.13370052299888,
+  "update_fit_seconds_per_month": 2.0111417102499067,
+  "score_seconds": 1.6380154940015927,
+  "scoring_ms_per_1000": 14.609224719516176,
+  "query_seconds": 0.006513247999464511,
+  "peak_rss_mb": 696.95703125,
+  "scored_objects": 112122,
+  "analyst_labels": 1200,
+  "explore_fraction": 0.0
+}

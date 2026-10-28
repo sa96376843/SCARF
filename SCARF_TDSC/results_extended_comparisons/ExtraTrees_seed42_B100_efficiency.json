@@ -1,0 +1,15 @@
+{
+  "method": "ExtraTrees",
+  "seed": 42,
+  "budget": 100,
+  "initial_fit_seconds": 1.531905666000057,
+  "update_fit_seconds": 24.327781756997865,
+  "update_fit_seconds_per_month": 2.027315146416489,
+  "score_seconds": 5.420274834000338,
+  "scoring_ms_per_1000": 48.34265205758315,
+  "query_seconds": 0.003999018000286014,
+  "peak_rss_mb": 649.4453125,
+  "scored_objects": 112122,
+  "analyst_labels": 1200,
+  "explore_fraction": 0.0
+}

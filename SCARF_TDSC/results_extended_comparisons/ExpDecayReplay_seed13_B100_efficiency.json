@@ -1,0 +1,15 @@
+{
+  "method": "ExpDecayReplay",
+  "seed": 13,
+  "budget": 100,
+  "initial_fit_seconds": 2.731161417000294,
+  "update_fit_seconds": 45.665666361997864,
+  "update_fit_seconds_per_month": 3.8054721968331555,
+  "score_seconds": 1.8003849870001432,
+  "scoring_ms_per_1000": 16.05737488628586,
+  "query_seconds": 0.003766631000871712,
+  "peak_rss_mb": 705.46484375,
+  "scored_objects": 112122,
+  "analyst_labels": 1200,
+  "explore_fraction": 0.0
+}

@@ -1,0 +1,15 @@
+{
+  "method": "RandomForest",
+  "seed": 13,
+  "budget": 100,
+  "initial_fit_seconds": 13.18368429199927,
+  "update_fit_seconds": 164.20263463900028,
+  "update_fit_seconds_per_month": 13.683552886583357,
+  "score_seconds": 4.6084550760006096,
+  "scoring_ms_per_1000": 41.102148338422516,
+  "query_seconds": 0.004028055001072062,
+  "peak_rss_mb": 634.81640625,
+  "scored_objects": 112122,
+  "analyst_labels": 1200,
+  "explore_fraction": 0.0
+}

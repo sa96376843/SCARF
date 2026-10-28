@@ -1,0 +1,327 @@
+{
+  "protocol": {
+    "version": "SCARF-dynamic-gate-v1",
+    "status": "CODE_READY_REAL_DATA_NOT_RUN",
+    "dataset_sha256": "5e5123aba9a9c813fc3df49aa18c74c40c9e234eda62bbb6fc347632aee462f2",
+    "seeds": [
+      13,
+      42,
+      87
+    ],
+    "budget": 100,
+    "gate": {
+      "target_auc": 0.995,
+      "scale": 0.05,
+      "audit_fraction": 0.2,
+      "window_months": 3,
+      "min_per_class": 5
+    },
+    "model": {
+      "members": 3,
+      "trees": 240,
+      "learning_rate": 0.05,
+      "threads": 4
+    },
+    "query_weight": 2.0,
+    "pseudo_weight": 0.1,
+    "pseudo_cap": 500,
+    "methods": [
+      "LegacyV3",
+      "EnsembleMargin",
+      "FrozenGate",
+      "DynamicGate",
+      "QueryOnly",
+      "PseudoOnly",
+      "NoPseudo",
+      "RecentReplay",
+      "FrozenThreshold"
+    ],
+    "evaluation": [
+      "f1",
+      "fpr",
+      "tpr_at_1fpr",
+      "auc",
+      "brier",
+      "ece"
+    ],
+    "selection_rule": "Report all configurations and seeds; no test-driven tuning or scalar composite score.",
+    "temporal_rule": "Predict and freeze month t before any labels; audit feedback controls month t+1 acquisition and the post-t update only."
+  },
+  "source_sha256": {
+    "LegacyV3_seed13_B100\\status.json": "229233ac8f0f8ed5f6d704454fa35140453700702a46571f3de77c59735fa1fd",
+    "LegacyV3_seed13_B100\\run_manifest.json": "60042598fc91a9b1bfd46722b1ea601402aec856f08f93a617e91844fec1be91",
+    "LegacyV3_seed13_B100\\monthly_metrics.csv": "cefd98edfdcb2f1e302a0bb68b2bf24686feb223176e0d411e620eeb9ae768c4",
+    "LegacyV3_seed13_B100\\feedback.csv": "98b640cbac2059ff7592ab239a46b4b4093867221b44f6c88da345b3b53cb11b",
+    "LegacyV3_seed13_B100\\queries.csv": "22f591feab4babb96467bfdd0cb88c74f34792e9b2b0704ef9eb947cd03db999",
+    "LegacyV3_seed42_B100\\status.json": "8f7967e9f12081cdffd34dd5bf478b02c3f54206489abab9d0728f061a381587",
+    "LegacyV3_seed42_B100\\run_manifest.json": "f7f7847bd49f5813b63a8ca45c213a169fe1e1b16571b7388b610dd44dc8a903",
+    "LegacyV3_seed42_B100\\monthly_metrics.csv": "3f8826f0856d117496191ffb352f251fde3be5af79163aba7efdb50becf189cc",
+    "LegacyV3_seed42_B100\\feedback.csv": "e7f70caa4f741596b00b64d75fb4d733031b4a54048ef23c8a0f06184963d17c",
+    "LegacyV3_seed42_B100\\queries.csv": "b8fa586e25752e5dc28bc9e9cdbf02e7c828f114bd1e5c8019ea1580e8cfba39",
+    "LegacyV3_seed87_B100\\status.json": "532bd8f19d837f0ff622f2703dab0f0ae8fdb4c16e1fac5fa7ea465e26f0ba35",
+    "LegacyV3_seed87_B100\\run_manifest.json": "c763f1ca515a04c409629d2076fe8f809b983e58e9d94a7a845982c7498add4a",
+    "LegacyV3_seed87_B100\\monthly_metrics.csv": "77e5e50f3ad1c40193680bbef73b510c07de33ae92b72da6be28b91601db242f",
+    "LegacyV3_seed87_B100\\feedback.csv": "7b0aab75bb5d679161d1474825a46130aeb06b2f31b721e99b7dccbcc4524994",
+    "LegacyV3_seed87_B100\\queries.csv": "a18c48eb9d3a21d4a8bf1c92191370219a31715a24eb508728e8a8f646f08538",
+    "EnsembleMargin_seed13_B100\\status.json": "9173a247bbab8faf27eb15956393841c084f18b2bddbefb220ecf011e90336a9",
+    "EnsembleMargin_seed13_B100\\run_manifest.json": "5add00a60fd295e7a052ea6d9ca4226e44b857d6a589eee2745a0ea643845c3b",
+    "EnsembleMargin_seed13_B100\\monthly_metrics.csv": "c0d82de4db9d52466e505f51b98042210521c4e86f81e9da16a2e4ee31c82ba3",
+    "EnsembleMargin_seed13_B100\\feedback.csv": "5b6e8a08c51c62bd8c85f38e8db3443e8748ee45a27b0fb9b1a1214d43ef8fb6",
+    "EnsembleMargin_seed13_B100\\queries.csv": "3b57d87291cd008f0cba4b93e27dc6664583284a3591e98c15980b751a7686ec",
+    "EnsembleMargin_seed42_B100\\status.json": "efc9a71ec7eb9c29edb14c9a542f1491599a3abeccda7a7a3769514a28335fcb",
+    "EnsembleMargin_seed42_B100\\run_manifest.json": "0a659959c09cbb64f64d257bc74de262fa11bea11818f732203cb0425fdab334",
+    "EnsembleMargin_seed42_B100\\monthly_metrics.csv": "392886c2692523b2811fc2d5fb1e4016d9edab4d7d01fde3d194d1a45274b273",
+    "EnsembleMargin_seed42_B100\\feedback.csv": "8c02c2e87c06ec184900fe64dabfc056eb7caaa8bbcda5f3f4f8fc21180d8f27",
+    "EnsembleMargin_seed42_B100\\queries.csv": "174f9dfef0d17aebf55f5c38887c970acfccb37375e12b88fe265f79cb27a20b",
+    "EnsembleMargin_seed87_B100\\status.json": "20545ed447a7d59eb840225ffccdd14797ec9a290f3dd697652baf4c2da1ce00",
+    "EnsembleMargin_seed87_B100\\run_manifest.json": "71a1fd966b859923f845e24248ef54bc909a924437ad43c1bb6aea5d6955be64",
+    "EnsembleMargin_seed87_B100\\monthly_metrics.csv": "0d32c20dec64b45fbceb9902b4e5bafe715acc49669ffcdee0b640a0d0af6e5a",
+    "EnsembleMargin_seed87_B100\\feedback.csv": "75b9c9f588c259b5d7434c74892ba3ac6a3501f18a430bdaef8cd930e1af0f38",
+    "EnsembleMargin_seed87_B100\\queries.csv": "8f54adf5c744fa19a3fe9ce603b622e0ee19b60b0ee950feda0ec173ae27f7c6",
+    "FrozenGate_seed13_B100\\status.json": "3cfceaa7a3066254a28f080bfed17ac8f9690aef7814ff53b765d305c4517a95",
+    "FrozenGate_seed13_B100\\run_manifest.json": "ab2a2a0eac7dda64924c995c5d9ea3df60b038a0797448cd75e8d7d9eaf077af",
+    "FrozenGate_seed13_B100\\monthly_metrics.csv": "bd003ec5d4337abf7dc436ceed5ad48ca687a8774fa16e585ab4a6d20b888aeb",
+    "FrozenGate_seed13_B100\\feedback.csv": "a51ff8a0997219c5116ab19e7bd580588d395bd6b363820a0fb17cc91431d5b6",
+    "FrozenGate_seed13_B100\\queries.csv": "a3d54c12e841098cf9332ba8f83b7fb43439aa213b2f8e79ded88c4a8a5331b2",
+    "FrozenGate_seed42_B100\\status.json": "86dcb9db8e0b8655cbff44a9bf73c6975e62520f0839ca582f87035dc98385f1",
+    "FrozenGate_seed42_B100\\run_manifest.json": "1a6670c87b3500d8bc73ffd939500bdb5ab1bcaced6244beca62f62ff55cd395",
+    "FrozenGate_seed42_B100\\monthly_metrics.csv": "b9aa869dce97eded096bf704cbf7d9d701b67a142a43c4b274d225c5f00b036f",
+    "FrozenGate_seed42_B100\\feedback.csv": "52f9b3b52060daf0203821d3f3058d5f7aaa3dbfa7c7dc0474cd65ecd8168ccd",
+    "FrozenGate_seed42_B100\\queries.csv": "fc37ab06e7c74cb993b34c1dd66f9d866fd82a513a811da9207e9783761973ae",
+    "FrozenGate_seed87_B100\\status.json": "1ab220d5887539bfe2ed3ec8e8438115c492b0aa70d4edf011a19483455f6a77",
+    "FrozenGate_seed87_B100\\run_manifest.json": "671b3eaa7af8880db01cfdd10a5bb6d232a292d06908790a28a6f48ec4a13a92",
+    "FrozenGate_seed87_B100\\monthly_metrics.csv": "4128ef93db9c504f9cc9442a29d66408feed975d5d31925df22a9420615bc39c",
+    "FrozenGate_seed87_B100\\feedback.csv": "c81711150bab4c9624ba3ccb3cfe0934441c9bed5adfaa6829b607f251fcea16",
+    "FrozenGate_seed87_B100\\queries.csv": "a77666549f9064a5417a8cb1db3dba83e55a68b8222ba631684944931b0eb954",
+    "DynamicGate_seed13_B100\\status.json": "be022a92b7763d39713d7f7281179e40d3ed7b435f16c932c8850a249b8b7322",
+    "DynamicGate_seed13_B100\\run_manifest.json": "216cffddb8f339cab8a18099807f3b3dd1a8f188013171bf3e7a0bbf33b4b06f",
+    "DynamicGate_seed13_B100\\monthly_metrics.csv": "e1ed8a730405f0432b1faeb22e173ce655c9435a0518d41c63354bdfd694a10a",
+    "DynamicGate_seed13_B100\\feedback.csv": "c0ea69671e9e6a4342023785f4accaab3ed1e30f030d556fad4f9d7514b97aec",
+    "DynamicGate_seed13_B100\\queries.csv": "263faa68b3cd88e9cab4cde0b62d4aa8c4122520c45fef16890d492925b750d8",
+    "DynamicGate_seed42_B100\\status.json": "9dbba44daa56d67782d7beab998e0070fe0ba69649b134fd7e6e52f0943d3baf",
+    "DynamicGate_seed42_B100\\run_manifest.json": "7620830ee1f7ab5f74c63cc9b66eecce6a40709d1c49989c9cfcad4efae8edaa",
+    "DynamicGate_seed42_B100\\monthly_metrics.csv": "31d047ee2da45a0fd8a08eb03b4be78c73d80b2cf7a697aab4b0853d7708e7d6",
+    "DynamicGate_seed42_B100\\feedback.csv": "62af1c27788399c3a0bb4f6a67f8ac624bda33ed05e3fabd25a8c084566090ef",
+    "DynamicGate_seed42_B100\\queries.csv": "a8211cde99e67ec43e99cca11cf16528cd0f257c88ab9cff34182d217a6fb77c",
+    "DynamicGate_seed87_B100\\status.json": "0638a778a06128ad30d4ddc4bb43be2d8b4f5f43aaf5649341ee53a4e682ff37",
+    "DynamicGate_seed87_B100\\run_manifest.json": "6e5a8e7f08a532c8ada2c31700d606a46477110c1216224c9589b2de54bdf70f",
+    "DynamicGate_seed87_B100\\monthly_metrics.csv": "71cd46c1211aa37206f257b1fe58531def3d32db4e75cbd015dd5d38f72dd988",
+    "DynamicGate_seed87_B100\\feedback.csv": "09471848dad397513d64392253fe78364c10d83601e0ac52c0454efc35832ad0",
+    "DynamicGate_seed87_B100\\queries.csv": "2dd21e4f9e48d04a1ec25e4b9a0cf36c40616f39c2a55071ad1d78605d144dd1",
+    "QueryOnly_seed13_B100\\status.json": "39f29bb969ab9d62e679b281f90eb83df14adcddb4883b8fe6135bf7a863effd",
+    "QueryOnly_seed13_B100\\run_manifest.json": "5eda356983eb402bfd16bd3f3003b4430250990886946929138a2b9955018361",
+    "QueryOnly_seed13_B100\\monthly_metrics.csv": "85357a1d18505b4d8959fa10194a0c2f7a0b72505e988716e5b135d72fcaa265",
+    "QueryOnly_seed13_B100\\feedback.csv": "3776a8028ee60cf1dac8c99fd3f28e7fb9bef431c26e9f8f10b0c53128675558",
+    "QueryOnly_seed13_B100\\queries.csv": "a54d300f3e879096175fd24af28978c06fdb40770d566957463087fb42aced72",
+    "QueryOnly_seed42_B100\\status.json": "807788336507d999699a69788834829cf4efe2e10520186248d798ff4177e14f",
+    "QueryOnly_seed42_B100\\run_manifest.json": "f0c014461d054d6ff0a389c2867a12a44af3a85037e58ba2a652556ca19d51e9",
+    "QueryOnly_seed42_B100\\monthly_metrics.csv": "fe807800c91d70e82efd3b513aae485de729907d2cc77d1dc95e1e761bfd2b61",
+    "QueryOnly_seed42_B100\\feedback.csv": "f479869d71528aa57574e4492d0f7962c56309c99cfcb7886c31d0811d45a2bc",
+    "QueryOnly_seed42_B100\\queries.csv": "86277af9b46b0714b946ff49f67b5625c03cd06c3160ee20b0633da4c36cfd90",
+    "QueryOnly_seed87_B100\\status.json": "44f8378b2cf179b242d0c074f92fc6613a0d44c14181c387511d5cf0b2bbc840",
+    "QueryOnly_seed87_B100\\run_manifest.json": "df2192e3215e675a8eabf73b0654279e8b5abcdb8fb6cc677cc103204b85fea7",
+    "QueryOnly_seed87_B100\\monthly_metrics.csv": "1da0f8a484f911364918c8620525361769b57c18a116b3a83390326f244414cf",
+    "QueryOnly_seed87_B100\\feedback.csv": "ddc67ea5519043a8d2d80ebb7ec3d1a004fd80dc38c82839dc178f1a67c3fb34",
+    "QueryOnly_seed87_B100\\queries.csv": "4dd01e1a8566f5cefb62156fe7ae6f3b4c1fb8760e9cd05ba70b4058f00d6b8c",
+    "PseudoOnly_seed13_B100\\status.json": "11d739187198dd56f439e4a8015f4008a416e3923e1d7f1862e43395fbf35c31",
+    "PseudoOnly_seed13_B100\\run_manifest.json": "e0cc7a6e8a81ee4d8a53668710abe1b1a096207c1497e20782be4e6bc5712c83",
+    "PseudoOnly_seed13_B100\\monthly_metrics.csv": "494055849766af2f6424679e625187c75903a2d110775c797637125cde597cf4",
+    "PseudoOnly_seed13_B100\\feedback.csv": "0e427d90cc3918347d58befa2264843270d5eccd11a8d91c7ba77ba010eb0595",
+    "PseudoOnly_seed13_B100\\queries.csv": "3d7a9e32e048aec13bcda064dbb613856c0eb53d3ea617fcb5a57c08c61ef961",
+    "PseudoOnly_seed42_B100\\status.json": "12251b6e3b9aaf196b5b441111587aede91ce6ba47c503f4684c21abe6488618",
+    "PseudoOnly_seed42_B100\\run_manifest.json": "e55d02e1ee50b7a5c7c25a0277b41d9c3a8f34b61d8dffb471cb1b8fef340237",
+    "PseudoOnly_seed42_B100\\monthly_metrics.csv": "4f421f5bdcb330ab4afccb52d63d8797c20e1448d45c47e95e08109107d05f6a",
+    "PseudoOnly_seed42_B100\\feedback.csv": "1ad8d1af913366184ebda28148fb6cd6fced7fdf94942a983a5c02bf71b939d9",
+    "PseudoOnly_seed42_B100\\queries.csv": "73d15c0940bd1d21d7ebd2c38881fc0895c96eb031b9874c544e583e081e7530",
+    "PseudoOnly_seed87_B100\\status.json": "61789597f7e5c7779c23b3abbe889458afb147d61765cc7fd708e08c19d84c19",
+    "PseudoOnly_seed87_B100\\run_manifest.json": "baae35a98b8cfb63695d5fb1e9dfcf96b4bca6a62d23dcbb60b057a6ef535349",
+    "PseudoOnly_seed87_B100\\monthly_metrics.csv": "121d9dda26bb9ba99caa7ed2c9ca4f4e145ac9a8146ac437f4c4444e87dca28b",
+    "PseudoOnly_seed87_B100\\feedback.csv": "692508fb99b4bcc6394fd7acbce62e9736efb93a201d62bb80654fba37afbf20",
+    "PseudoOnly_seed87_B100\\queries.csv": "f210be1cded2d3bbd8c430cc33bfb67bbc865811e189278a32c292ae6a0991c8",
+    "NoPseudo_seed13_B100\\status.json": "e4c3f8eec7f17a0dacfe58dfb327333afd565cf685fe549d5e332581d865ef3c",
+    "NoPseudo_seed13_B100\\run_manifest.json": "282fe43730758f25629447b7850f0f84b578bcb49ab7f51584f1f8a4357a0802",
+    "NoPseudo_seed13_B100\\monthly_metrics.csv": "c3a13b07bcd39ba771f94a43d24f1390ef0bb54443dcdc48724c0797c46bb3f1",
+    "NoPseudo_seed13_B100\\feedback.csv": "890a2e63b2db7f883cee3dd60c65a49e62fcfb6e359ca508fa9418bf70e1b06b",
+    "NoPseudo_seed13_B100\\queries.csv": "eac4b5d507cfcb3dc1eff2e2473f4e7334d165f55f13255ea40f79705aaab877",
+    "NoPseudo_seed42_B100\\status.json": "059a6f89a7e352236e0f55f9e59ff28688397a03de5739e0428bee33e614108f",
+    "NoPseudo_seed42_B100\\run_manifest.json": "c176a21d42d165c80e66ce1c04012146d60d211064249bfc8193cc134d9a5ed9",
+    "NoPseudo_seed42_B100\\monthly_metrics.csv": "8525dc17a95b4d9fa803b503d75a1e16b4d2a7c94fbd9c9c10d25ad2407ff5d1",
+    "NoPseudo_seed42_B100\\feedback.csv": "814f0f002e0fcf31ba60dd3c47e0c15f4e8c44418e9e2503472bfec4471a1c86",
+    "NoPseudo_seed42_B100\\queries.csv": "d7a220bf2786890b37de82d2c6aa9359f09a5ee7ec8f3e924978579a94cf9e1b",
+    "NoPseudo_seed87_B100\\status.json": "23ddc5618128e310536c027e866f1fb1381db458e3450ea758f07a01b5fcb625",
+    "NoPseudo_seed87_B100\\run_manifest.json": "bffa92d83726696f74e1642d7ea90d44c456c0f32e7d4d23967473d4356227d0",
+    "NoPseudo_seed87_B100\\monthly_metrics.csv": "116b3c5a1fea8b898c062b109901a20b4df59d13c085d6364787873de647b06e",
+    "NoPseudo_seed87_B100\\feedback.csv": "19f140eecdda09a645f336a84e203afea4bc2b9e80b584c6ac85c1355315f029",
+    "NoPseudo_seed87_B100\\queries.csv": "ebc8fc598943a9c7d2d93e34015e3dd131e8348dacb4e2f79d9593b0e515c0ed",
+    "RecentReplay_seed13_B100\\status.json": "78b8a530b08cbe02d14ffc9598c25308eecbc53ded9435cd7cb9bd2ce16e1a57",
+    "RecentReplay_seed13_B100\\run_manifest.json": "86b01100ef26f88530fc18e8188e0a8387c6705d84e47f9165ca863facb357d4",
+    "RecentReplay_seed13_B100\\monthly_metrics.csv": "4ecb71d150ad9e5e377f748991c706459536b6bfb8d0d5052ad55ebd75e0791e",
+    "RecentReplay_seed13_B100\\feedback.csv": "738eda14b8bc2f7e190ce37bfaf423fff60216e66114b18047209790408e3dc1",
+    "RecentReplay_seed13_B100\\queries.csv": "3246e07a57dfdbab8e2eace0d435314684313633b9599896acd1216ae1a7b73f",
+    "RecentReplay_seed42_B100\\status.json": "d71c9770bf5033a261d709687e79a4fd917815abc3c49a183a3e07a29e2daa51",
+    "RecentReplay_seed42_B100\\run_manifest.json": "3f24c4c6ea581c943c92d06bfbbb5c54f5558820db4050ee6a5c9dd5d2bf435b",
+    "RecentReplay_seed42_B100\\monthly_metrics.csv": "a75f3b3f89716d3f8773f45eb0510c87c4b425bdd450f2ca8f06d23550445a97",
+    "RecentReplay_seed42_B100\\feedback.csv": "2b584af779a7a343226147668d4b12cc84d94a7043ac65f19cf4b4d08e24f308",
+    "RecentReplay_seed42_B100\\queries.csv": "d6dab5ae3a1c26eee6617ef7f1d7706b58338f06a40b2512b2b157d7c05e108f",
+    "RecentReplay_seed87_B100\\status.json": "058406c5cee3e533a3141e1c5c7b8af8e712c3d2a143ad91f591fd10d025fe33",
+    "RecentReplay_seed87_B100\\run_manifest.json": "b55156e1375f654c7029b211f7a98844a552083ebd03787831da18854d64add0",
+    "RecentReplay_seed87_B100\\monthly_metrics.csv": "131afaa46a24e9a290ce7d90ebffa6c8198f6db8ec99fcbae811c92e3bfe8cbe",
+    "RecentReplay_seed87_B100\\feedback.csv": "96c0422a28015c5c59e1688b5504966287fccb46ffafbcfacc34e5ed3e983739",
+    "RecentReplay_seed87_B100\\queries.csv": "7cb27d4a1d5c7d0367f5da054dcf78e66ed0eec8ca964aaedd75447f9e057c5c",
+    "FrozenThreshold_seed13_B100\\status.json": "a2e6383ebfc5425ce9d354dd891f07906097f9385bb75e17c0be83b927f80613",
+    "FrozenThreshold_seed13_B100\\run_manifest.json": "510c558304206f8789a87f97ea9634003fea839275fb7295b89fa4ddffd7ae7a",
+    "FrozenThreshold_seed13_B100\\monthly_metrics.csv": "8d910160cc78a4ab75eca0a7b6451697af902c56c0b829291e7b54d2ad57f523",
+    "FrozenThreshold_seed13_B100\\feedback.csv": "f81c615ec48fb3c9740569a67d5b12b7e12f7917c3ddc7c703bee2dc86123824",
+    "FrozenThreshold_seed13_B100\\queries.csv": "b4a7643236bf373dc6bca3af0cc5b03a1d988f2cc3a171f6953699e07df2f855",
+    "FrozenThreshold_seed42_B100\\status.json": "74f6c26623fc8d08428a084474c780665f3c53d8bef801efd7ba11be37057fae",
+    "FrozenThreshold_seed42_B100\\run_manifest.json": "47d24e0c616efdafc03d903bf0c487310047fcd3d9008ddbcf1d1e6165e66d9a",
+    "FrozenThreshold_seed42_B100\\monthly_metrics.csv": "1fa7d5dda8282c48653145e7f25ecc2d2845bbaaf06f1c8e5fe853e884020ab1",
+    "FrozenThreshold_seed42_B100\\feedback.csv": "daee49ab8ab466d1861c59f1f665823f60d1001771eeddabab8acf6edbd533f8",
+    "FrozenThreshold_seed42_B100\\queries.csv": "d95a9f3654df3e14b1b7eec5d153f7349fb5b6592be1c222873b13e0fe4b35fd",
+    "FrozenThreshold_seed87_B100\\status.json": "6f1d8037eff9b5c130b5037a29bdb87f9af37539eeb02df1fcb912555f0a3960",
+    "FrozenThreshold_seed87_B100\\run_manifest.json": "084e9bb1a9608ca70c6115ff3294a06cb6f1e50d526f5643c4ed58d011d21980",
+    "FrozenThreshold_seed87_B100\\monthly_metrics.csv": "22f9727b616065c4c399330c42fecde732a6bf713857b74cbe453c4a7e9c5f4a",
+    "FrozenThreshold_seed87_B100\\feedback.csv": "4f348c8572f0ec678a74e823c3070618bbf0183d9b35ecef5967ec38f16ede9b",
+    "FrozenThreshold_seed87_B100\\queries.csv": "ed58ace622f8774a1d1f8acf588d6ec645c5f25f9b4dd2fe6e5a029ddee68979"
+  },
+  "analysis_sha256": "2a6c1af3311acf1597214eda1aae82365b6130bdf6d2028d3838b810840e5405",
+  "checks": [
+    {
+      "run": "LegacyV3_seed13_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "LegacyV3_seed42_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "LegacyV3_seed87_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "EnsembleMargin_seed13_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "EnsembleMargin_seed42_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "EnsembleMargin_seed87_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "FrozenGate_seed13_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "FrozenGate_seed42_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "FrozenGate_seed87_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "DynamicGate_seed13_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "DynamicGate_seed42_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "DynamicGate_seed87_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "QueryOnly_seed13_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "QueryOnly_seed42_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "QueryOnly_seed87_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "PseudoOnly_seed13_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "PseudoOnly_seed42_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "PseudoOnly_seed87_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "NoPseudo_seed13_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "NoPseudo_seed42_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "NoPseudo_seed87_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "RecentReplay_seed13_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "RecentReplay_seed42_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "RecentReplay_seed87_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "FrozenThreshold_seed13_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "FrozenThreshold_seed42_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    },
+    {
+      "run": "FrozenThreshold_seed87_B100",
+      "unique_queries": true,
+      "budget_valid": true
+    }
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5"
+}

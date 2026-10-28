@@ -1,0 +1,15 @@
+{
+  "method": "RecentOnly",
+  "seed": 42,
+  "budget": 100,
+  "initial_fit_seconds": 2.7911922670009517,
+  "update_fit_seconds": 18.75310018199707,
+  "update_fit_seconds_per_month": 1.5627583484997558,
+  "score_seconds": 1.5353844189958181,
+  "scoring_ms_per_1000": 13.693872915180055,
+  "query_seconds": 0.0035546640028769616,
+  "peak_rss_mb": 645.67578125,
+  "scored_objects": 112122,
+  "analyst_labels": 1200,
+  "explore_fraction": 0.0
+}

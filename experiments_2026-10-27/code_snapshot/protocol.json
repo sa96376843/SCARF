@@ -1,0 +1,16 @@
+{
+  "version": "SCARF-dynamic-gate-v1",
+  "status": "CODE_READY_REAL_DATA_NOT_RUN",
+  "dataset_sha256": "5e5123aba9a9c813fc3df49aa18c74c40c9e234eda62bbb6fc347632aee462f2",
+  "seeds": [13, 42, 87],
+  "budget": 100,
+  "gate": {"target_auc": 0.995, "scale": 0.05, "audit_fraction": 0.2, "window_months": 3, "min_per_class": 5},
+  "model": {"members": 3, "trees": 240, "learning_rate": 0.05, "threads": 4},
+  "query_weight": 2.0,
+  "pseudo_weight": 0.1,
+  "pseudo_cap": 500,
+  "methods": ["LegacyV3", "EnsembleMargin", "FrozenGate", "DynamicGate", "QueryOnly", "PseudoOnly", "NoPseudo", "RecentReplay", "FrozenThreshold"],
+  "evaluation": ["f1", "fpr", "tpr_at_1fpr", "auc", "brier", "ece"],
+  "selection_rule": "Report all configurations and seeds; no test-driven tuning or scalar composite score.",
+  "temporal_rule": "Predict and freeze month t before any labels; audit feedback controls month t+1 acquisition and the post-t update only."
+}

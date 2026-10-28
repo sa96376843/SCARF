@@ -1,0 +1,31 @@
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrr}
+\toprule
+Item / month & Value / total & Malware & Benign & Malware rate \\
+\midrule
+\multicolumn{5}{l}{\textbf{Frozen temporal protocol}} \\
+Initial training & August 2019 only & -- & -- & -- \\
+Calibration & September 2019 only & -- & -- & -- \\
+Evaluation & October 2019--September 2020 & -- & -- & -- \\
+Base / retained features & 384 / 384 & -- & -- & -- \\
+Monthly label budgets & 25, 50, 100, 200 & -- & -- & -- \\
+Seeds & 13, 42, 87 & -- & -- & -- \\
+Operating target & 1\% calibration FPR & -- & -- & -- \\
+Update rule & Post-evaluation only & -- & -- & -- \\
+Base learner & Baselines: 120 trees; SCARF: 3 x 240 trees & -- & -- & -- \\
+\midrule
+\multicolumn{5}{l}{\textbf{Monthly BODMAS evaluation population}} \\
+2019-10 & 8474 & 4549 & 3925 & 0.537 \\
+2019-11 & 6212 & 2494 & 3718 & 0.401 \\
+2019-12 & 10159 & 4038 & 6121 & 0.397 \\
+2020-01 & 10436 & 4515 & 5921 & 0.433 \\
+2020-02 & 7972 & 4264 & 3708 & 0.535 \\
+2020-03 & 8567 & 4990 & 3577 & 0.582 \\
+2020-04 & 9841 & 4640 & 5201 & 0.471 \\
+2020-05 & 11570 & 5449 & 6121 & 0.471 \\
+2020-06 & 12399 & 4217 & 8182 & 0.340 \\
+2020-07 & 11387 & 5000 & 6387 & 0.439 \\
+2020-08 & 6337 & 3816 & 2521 & 0.602 \\
+2020-09 & 8768 & 4577 & 4191 & 0.522 \\
+\bottomrule
+\end{tabular}
